@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# coding=utf-8
 from flask import Flask
 from flask_restplus import Api, Resource, fields
 from sklearn.externals import joblib
