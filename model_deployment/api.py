@@ -10,10 +10,7 @@ api = Api(
     app, 
     version='1.0', 
     title='Price Prediction API G7',
-    description='Angie Paola Chacon Pinzon: 201012536
-Jahir Stevens Rodriguez Riveros: 201819361
-Juan Andres Cabal Jaramillo: 200620778
-David Tavera Sánchez: 201016123')
+    description='Angie Paola Chacon Pinzon: 201012536\nJahir Stevens Rodriguez Riveros: 201819361\nJuan Andres Cabal Jaramillo: 200620778\nDavid Tavera Sánchez: 201016123')
 
 ns = api.namespace('predict', 
      description='Price Regressor')
