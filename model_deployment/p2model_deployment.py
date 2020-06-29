@@ -5,9 +5,9 @@ from sklearn.externals import joblib
 import sys
 import os
 
-def predict_price(year,mileage,state,make,model):
 
-    
+def predict_price(year,mileage,state,make,model):
+  
     # Preparacion datos
     stc =[' AK', ' AL', ' AR', ' AZ', ' CA', ' CO', ' CT', ' DC', ' DE', ' FL', ' GA', ' HI', ' IA', ' ID', ' IL', ' IN', ' KS', ' KY', ' LA', ' MA', ' MD', ' ME', ' MI', ' MN', ' MO', ' MS', ' MT', ' NC', ' ND', ' NE', ' NH', ' NJ', ' NM', ' NV', ' NY', ' OH', ' OK', ' OR', ' PA', ' RI', ' SC', ' SD', ' TN', ' TX', ' UT', ' VA', ' VT', ' WA', ' WI', ' WV', ' WY']
     mkc=['Acura', 'Audi', 'BMW', 'Bentley', 'Buick', 'Cadillac', 'Chevrolet', 'Chrysler', 'Dodge', 'FIAT', 'Ford', 'Freightliner', 'GMC', 'Honda', 'Hyundai', 'INFINITI', 'Jaguar', 'Jeep', 'Kia', 'Land', 'Lexus', 'Lincoln', 'MINI', 'Mazda', 'Mercedes-Benz', 'Mercury', 'Mitsubishi', 'Nissan', 'Pontiac', 'Porsche', 'Ram', 'Scion', 'Subaru', 'Suzuki', 'Tesla', 'Toyota', 'Volkswagen', 'Volvo']
@@ -37,13 +37,12 @@ def predict_price(year,mileage,state,make,model):
         else:
             car_[mdli]=0
 
-    #clf = joblib.load(os.path.dirname(__file__) + '/modelop2.pkl') 
-    
+    #clf = joblib.load(os.path.dirname(__file__) + '/mimodelo.pkl') 
+    #RUTA=os.path.dirname(__file__) + '/mimodelo.pkl'
     # Make prediction
-    if make.upper()=='Audi'.upper():
-        p1 = 1000#clf.predict(car_)
-    else:
-        p1=500
+    
+    p1 = 1000#clf.predict(car_)
+    
 
     return p1
 
