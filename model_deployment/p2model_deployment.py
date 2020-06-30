@@ -37,11 +37,11 @@ def predict_price(year,mileage,state,make,model):
         else:
             car_[mdli]=0
 
-    #clf = joblib.load(os.path.dirname(__file__) + '/mimodelo.pkl') 
+    clf = joblib.load(os.path.dirname(__file__) + '/modeloGB.pkl') 
     #RUTA=os.path.dirname(__file__) + '/mimodelo.pkl'
     # Make prediction
     
-    p1 = 1000#clf.predict(car_)
+    p1 =clf.predict(car_)
     
 
     return p1
